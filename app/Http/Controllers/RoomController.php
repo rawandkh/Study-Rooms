@@ -129,8 +129,8 @@ return view('index',compact('rooms','topics','topics_count','rooms_count'));
                 # code...
           
             $room->update([
-                'name'=>$request->name,
-                'description'=>$request->description,
+                'name'=>$request->name ?? $room->name,
+                'description'=>$request->description ?? $room->description,
             ]);
             return to_route('index');
         }

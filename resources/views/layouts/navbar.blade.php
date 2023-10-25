@@ -24,7 +24,7 @@
                 
             
             <div class="header__user">
-                <a href="{% url 'update-user' %}">
+                <a href="{{route('profile.edit', auth()->user()->id)}}">
                     <div class="avatar avatar--medium active">
                         <img src="{{asset('images/22437186.jpg')}}" />
                     </div>

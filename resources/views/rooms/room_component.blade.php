@@ -39,7 +39,7 @@
     
     <div class="roomListRoom">
         <div class="roomListRoom__header">
-            <a href="{% url 'user-profile' room.host.id %}" class="roomListRoom__author">
+            <a href="{{route('profile.edit', auth()->user()->id)}}" class="roomListRoom__author">
                 <div class="avatar avatar--small">
                     <img src="https://randomuser.me/api/portraits/women/11.jpg" />
                 </div>
